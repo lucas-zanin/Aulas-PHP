@@ -1,0 +1,47 @@
+5 - Elabore um programa em PHP que permita mostrar os números entre o intervalo do número
+digitado pelo usuário até o cubo do mesmo.
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="intervalo">
+        <meta name="keywords" content="html,php">
+        <meta name="robots" content="exerc5.php">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>intervalo</title>
+    </head>
+    <body>
+        <header>
+            <h1>intervalo</h1>
+            <hr/>
+        </header>
+        <main>
+            <center><h1>intervalo</h1></center>
+            <br/><br/>
+            <form action="exerc5.php" method="POST">
+                <label>numero</label><br/>
+                <input type="number" name="numero"class="col-form-label" required/><br/>
+                <input type="submit" value="dale"class="btn btn-outline-primary"/>
+            </form>
+            <?php
+                if(isset($_POST['numero'])){
+                    $numero = $_POST['numero'];
+                    for($i=1;$i<4;$i++){
+                        $cubo=$numero*$numero*$numero;
+                    }
+                        for($i=$numero;$i<=$cubo;$i++){
+                            echo"$i ";
+                        }
+                    }else{
+                        echo"";
+                    }
+            ?>
+        </main>
+        <footer>
+            <p></p>
+        </footer>
+    </body>
+</html>
