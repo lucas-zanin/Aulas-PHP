@@ -1,0 +1,44 @@
+2 – Utilizando o comando for, escreva um algoritmo que imprima na tela todos os números pares até o 80.
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="pares">
+        <meta name="keywords" content="html,php">
+        <meta name="robots" content="exerc2.php">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>pares</title>
+    </head>
+    <body>
+        <header>
+            <h1>pares</h1>
+            <hr/>
+        </header>
+        <main>
+            <center><h1>Aplicativo pares</h1></center>
+            <br/><br/>
+            <form action="exerc2.php" method="POST">
+                <label>pares de que numero?</label><br/>
+                <input type="number" name="pares"class="col-form-label" required/><br/>
+                <input type="submit" value="dale"class="btn btn-outline-primary"/>
+            </form>
+            <?php
+                if(isset($_POST['pares'])){
+                    $pares = $_POST['pares'];
+                    for($i=1;$i<=80;$i++){
+                        if($i%2==0){
+                        echo"$i ";
+                        }
+                    }
+                    }else{
+                        echo"";
+                    }
+            ?>
+        </main>
+        <footer>
+            <p></p>
+        </footer>
+    </body>
+</html>
