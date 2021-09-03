@@ -1,0 +1,49 @@
+3 – Escreva um algoritmo em PHP que receba dois números (início e fim). Se o número do início for menor que o fim, escreva os números do menor para o maior; caso contrário, do maior para o menor.
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="inicio fim">
+        <meta name="keywords" content="html,php">
+        <meta name="robots" content="exerc3.php">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>inicio fim</title>
+    </head>
+    <body>
+        <header>
+            <h1>inicio fim</h1>
+            <hr/>
+        </header>
+        <main>
+            <center><h1></h1></center>
+            <br/><br/>
+            <form action="exerc3.php" method="POST">
+                <label>inicio</label><br/>
+                <input type="number" name="n1"class="col-form-label" required/><br/>
+                <label>fim</label><br/>
+                <input type="number" name="n2"class="col-form-label" required/><br/>
+                <input type="submit" value="dale"class="btn btn-outline-primary"/>
+            </form>
+            <?php
+                if(isset($_POST['n1'])){
+                    $n1 = $_POST['n1'];
+                    $n2 = $_POST['n2'];
+                    if($n1<$n2){
+                    for($i=$n1;$i<=$n2;$i++){
+                        echo"$i<br/>";
+                    }
+                }else{
+                    for($i=$n1;$i>=$n2;$i--){
+                        echo"$i<br/>";
+                    }
+                }
+                    }
+            ?>
+        </main>
+        <footer>
+            <p></p>
+        </footer>
+    </body>
+</html>
